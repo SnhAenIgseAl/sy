@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_l3s",
+  "info": {
+    "singularName": "class-l3",
+    "pluralName": "class-l3s",
+    "displayName": "ClassL3"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "class_l2": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class-l2.class-l2",
+      "inversedBy": "class_l3"
+    },
+    "details": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::detail.detail",
+      "mappedBy": "class_l3"
+    }
+  }
+}

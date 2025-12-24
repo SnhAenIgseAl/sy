@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shops",
+  "info": {
+    "singularName": "shop",
+    "pluralName": "shops",
+    "displayName": "Shop"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "price": {
+      "type": "integer",
+      "required": true
+    },
+    "primary_img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "info_img": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "exchanges": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::exchange.exchange",
+      "mappedBy": "shop"
+    },
+    "shop_class": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::shop-class.shop-class",
+      "inversedBy": "shops"
+    }
+  }
+}

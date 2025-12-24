@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'iconfont';  /* Project id 4643974 */
+    src: url('//at.alicdn.com/t/c/font_4643974_7c5ninmzgyy.woff2?t=1737004997098') format('woff2'),
+         url('//at.alicdn.com/t/c/font_4643974_7c5ninmzgyy.woff?t=1737004997098') format('woff'),
+         url('//at.alicdn.com/t/c/font_4643974_7c5ninmzgyy.ttf?t=1737004997098') format('truetype');
+}
+
+.iconfont {
+    font-family: 'iconfont' !important;
+    font-size: 16rpx;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wd-tabbar--default {
+    display: flex !important;
+    justify-content: space-around;
+}
+
+.wd-tabbar-item {
+    flex: unset !important;
+    flex-grow: 1 !important;
+}
+
+.wd-tabbar-item__body .is-inactive {
+    color: unset !important;
+}
+
+.wd-tabbar-item__body .is-active {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -16rpx;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 32rpx;
+        height: 2px;
+        background-color: #fff;
+    }
+}
+
+.wd-tabbar-item__body-title {
+    font-size: 14px !important;
+}
+
+.wd-tabs__nav {
+	background-color: #000 !important;
+}
+
+.wd-navbar {
+    background-color: #000 !important;
+}
+
+.wd-navbar-capsule {
+    .wd-icon {
+        color: #fff !important;
+    }
+}
+
+.wd-tabs {
+    background-color: unset !important;
+}
+
+.wd-tabs__nav-item {
+    color: #fff !important;
+    background-color: #000 !important;
+}
+
+.wd-divider {
+    padding: unset !important;
+}
+
+.wd-card__content {
+    &::after {
+        background: #ccc !important;
+    }
+}
+
+.wd-card__footer {
+    &::after {
+        background: #ccc !important;
+    }
+}
+
+.wd-tabs__line {
+	background-color: #fff !important;
+}

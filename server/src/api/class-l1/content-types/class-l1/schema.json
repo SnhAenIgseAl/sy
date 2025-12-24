@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_l1s",
+  "info": {
+    "singularName": "class-l1",
+    "pluralName": "class-l1s",
+    "displayName": "ClassL1"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "class_title": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class-title.class-title",
+      "inversedBy": "class_l1"
+    },
+    "class_l2": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::class-l2.class-l2",
+      "mappedBy": "class_l1"
+    },
+    "details": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::detail.detail",
+      "mappedBy": "class_l1"
+    }
+  }
+}

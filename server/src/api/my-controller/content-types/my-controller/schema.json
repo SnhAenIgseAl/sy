@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "my_controllers",
+  "info": {
+    "singularName": "my-controller",
+    "pluralName": "my-controllers",
+    "displayName": "MyController"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "test": {
+      "type": "string"
+    }
+  }
+}

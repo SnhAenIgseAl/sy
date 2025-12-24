@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exchanges",
+  "info": {
+    "singularName": "exchange",
+    "pluralName": "exchanges",
+    "displayName": "Exchange"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "exchanges"
+    },
+    "shop": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::shop.shop",
+      "inversedBy": "exchanges"
+    },
+    "exchange_status": {
+      "type": "enumeration",
+      "default": "pending",
+      "enum": [
+        "pending",
+        "delivered",
+        "finished"
+      ]
+    },
+    "address": {
+      "type": "string"
+    },
+    "postscript": {
+      "type": "string"
+    },
+    "courier_number": {
+      "type": "string"
+    }
+  }
+}

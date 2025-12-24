@@ -1,0 +1,66 @@
+{
+  "kind": "collectionType",
+  "collectionName": "details",
+  "info": {
+    "singularName": "detail",
+    "pluralName": "details",
+    "displayName": "Detail"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "desc_imgs": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "desc_video": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "videos"
+      ]
+    },
+    "class_l3": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class-l3.class-l3",
+      "inversedBy": "details"
+    },
+    "class_l2": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class-l2.class-l2",
+      "inversedBy": "details"
+    },
+    "class_l1": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::class-l1.class-l1",
+      "inversedBy": "details"
+    },
+    "likes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::like.like",
+      "mappedBy": "detail"
+    },
+    "favorites": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::favorite.favorite",
+      "mappedBy": "detail"
+    },
+    "like_count": {
+      "type": "integer",
+      "default": 0
+    }
+  }
+}

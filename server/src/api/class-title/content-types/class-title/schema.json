@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "class_titles",
+  "info": {
+    "singularName": "class-title",
+    "pluralName": "class-titles",
+    "displayName": "ClassTitle"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "img": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "class_l1": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::class-l1.class-l1",
+      "mappedBy": "class_title"
+    }
+  }
+}
